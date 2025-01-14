@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from APP.views import home, index, study, studentview, datadelete, editdata,dataupdate,library
+from APP.views import home, index, study, studentview, datadelete, editdata,dataupdate,library,libraryview,librarydelete,editbook_fun
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',home),
@@ -27,5 +27,8 @@ urlpatterns = [
     path('edit/<int:id>',editdata),
     path('update/<int:id>',dataupdate),
     path('li',library),
+    path('lv',libraryview),
+    path('delete/<int:id>',librarydelete),
+    path('ed/<int:id>',editbook_fun),
     
 ]
